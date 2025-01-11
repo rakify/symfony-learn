@@ -13,4 +13,10 @@ class HomeController extends AbstractController
     {
         return $this->render('home/index.html.twig');
     }
+
+    #[Route('/greet/{name}', name: 'greet', defaults: ['name' => 'Guest'])]
+    public function greet(string $name): Response
+    {
+        return new Response("Welcome, $name!");
+    }
 }
