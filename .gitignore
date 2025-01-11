@@ -1,7 +1,7 @@
-
+# Ignore all .env files
+.env
+.env.*
 ###> symfony/framework-bundle ###
-/.env
-/.env.dev
 /.env.local
 /.env.local.php
 /.env.*.local
