@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+<style>
+    .link-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 50px;
+    }
+    .nav-link {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .nav-link:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<h1>Welcome to my first Symfony App 👋</h1>
+
+<div class="link-container">
+    <a href="{{ path('app_users') }}" class="nav-link">View Users</a>
+    <a href="{{ path('app_products') }}" class="nav-link">View Products</a>
+</div>
+{% endblock %}
